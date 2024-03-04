@@ -128,7 +128,8 @@ int main()
 	printf("\t1 - Qual o seu nome?\n");
 	printf("\t2 - Registar seu nome\n");
 	printf("\t3 - Deletar Nomes\n\n");
-	printf(" Opção: \n");//fim do menu
+	printf("\t4 - Sair do Sistema");
+	printf(" Opção: \n\n");//fim do menu
 	
 	scanf("%d",&opcao);//armazenando a esolha do usuario
 	
@@ -149,11 +150,20 @@ int main()
 		deletar();
         break;
         
+        case 4:
+        printf("Obrigado por utilizar o sistema!\n");
+        return 0;
+        break;
         
         default:
-        printf("Essa opcao não é valida\n");
+        printf("Essa opção não é valida!\n ");
         system("pause");
-		break;
+        break;
+    }
+    
+	
+        
+        
 	}
 	    
        
@@ -161,7 +171,7 @@ int main()
 
 
 }
-}
+
 
 
 

@@ -115,61 +115,70 @@ int main()
 {
 	int opcao=0;//defindo as variaveis
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
-  for(laco=1;laco=1;)
+	printf("Cartório Do Banco Central\n\n");
+	printf("Login do admistrador\n\nDigite a senha:");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
+	
 	{
+	
+   for(laco=1;laco=1;)
+	 {
 	
   
-     system("cls");
-	setlocale(LC_ALL, "Portuguese");//defindo a linguagem
+      system("cls");
+    	setlocale(LC_ALL, "Portuguese");//defindo a linguagem
 	
-	printf("Cartório Do Banco Central\n\n");//inicio do menu
-	printf("ESCOLHA A OPÇÃO DESEJADA NO MENU!!\n\n");
-	printf("\t1 - Qual o seu nome?\n");
-	printf("\t2 - Registar seu nome\n");
-	printf("\t3 - Deletar Nomes\n\n");
-	printf("\t4 - Sair do Sistema");
-	printf(" Opção: \n\n");//fim do menu
+    	printf("Cartório Do Banco Central\n\n");//inicio do menu
+    	printf("ESCOLHA A OPÇÃO DESEJADA NO MENU!!\n\n");
+    	printf("\t1 - Qual o seu nome?\n");
+    	printf("\t2 - Registar seu nome\n");
+	    printf("\t3 - Deletar Nomes\n\n");
+	    printf("\t4 - Sair do Sistema");
+	    printf(" Opção: \n\n");//fim do menu
 	
-	scanf("%d",&opcao);//armazenando a esolha do usuario
+	    scanf("%d",&opcao);//armazenando a esolha do usuario
 	
-	system("cls");
+	    system("cls");
 	
 	
-	switch(opcao)
-	{
-		case 1:
-		 registro();
-		 break;
-		 
-		case 2:
-		consultar();
-		break;
+      	switch(opcao)
+     	{
+	     	case 1:
+		    registro();
+		    break;
+		  
+		    case 2:
+		    consultar();
+			break;
 		
-		case 3:	
-		deletar();
-        break;
+		    case 3:	
+		    deletar();
+            break;
         
-        case 4:
-        printf("Obrigado por utilizar o sistema!\n");
-        return 0;
-        break;
+            case 4:
+             printf("Obrigado por utilizar o sistema!\n");
+            return 0;
+            break;
         
-        default:
-        printf("Essa opção não é valida!\n ");
-        system("pause");
-        break;
-    }
-    
+            default:
+            printf("Essa opção não é valida!\n ");
+            system("pause");
+            break;
+         }
+      }
+  }
+   else 
+    printf("Senha incorreta");	
+        
+        
 	
-        
-        
-	}
-	    
-       
-       
-
-
 }
 
 
